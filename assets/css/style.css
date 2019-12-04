@@ -1,0 +1,17 @@
+
+
+
+body{}
+
+h1{
+    background:#4aaaa5;
+    float:left;
+}
+p{
+    color:#777777;
+}
+
+#menubar{
+    background:red;
+    padding: 20px;
+}
