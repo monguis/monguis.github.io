@@ -1,9 +1,64 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
 
-
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 960px;
+}
 
 body{}
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    
+    float: right;
+  }
+
+  #mainname{
+      float:left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
+
+header{
+    color: #333;
+    background: #FFA500;   
+    width: 960px;
+    margin: auto;
+    padding: 10px;   
+
+}
+#whitebar{
+    background:blue;
+    width: 1200px;
+}
 h1{
+    
     background:#4aaaa5;
     float:left;
 }
@@ -12,6 +67,26 @@ p{
 }
 
 #menubar{
-    background:red;
-    padding: 20px;
+    float: right;
 }
+section{
+    float:left;
+    color:#fff;
+}
+
+#aboutme{
+    
+    max-width: 960px;
+    margin: auto;
+    background: blue;
+    padding: 10px;
+    
+}
+#personalpicture{
+    float:left;
+}
+
+
+
+
+
