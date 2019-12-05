@@ -16,7 +16,8 @@ body{
 
 #picturegrouper{
 position:relative;
-
+width: 100%;
+height: 960px;
 
 
 }
@@ -40,9 +41,10 @@ header{
 .innerlabelpicture{
     font-family: 'Times New Roman', Times, serif;
     position: relative; 
-    width:200px;
-    height: 200px;
+    width:300px;
+    height: 300px;
     color:#fff;
+    float: none;
 }
 
 .innerlabel{
@@ -143,4 +145,33 @@ background-color: gray;
 
 p{
     text-align: justify;
+}
+
+#photo1{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+#photo2{
+    position: absolute;
+    top:0;
+    left:320px;
+}
+
+#photo3{
+    position: absolute;
+    top:320px;
+    left:0;
+}
+
+#photo4{
+    position: absolute;
+    top:320px;
+    left:320px;
+}
+#photo5{
+    position: absolute;
+    top:640px;
+    left:o;
 }
