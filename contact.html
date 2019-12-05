@@ -10,24 +10,7 @@
     </title>
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <style>
-        label,
-        input,
-        textarea {
-            display: block;
-            margin-bottom: 10px;
-            width: 600px;
-        }
-
-        label {
-            font-weight: 700;
-            padding-top: 10px;
-        }
-
-        input[type="submit"] {
-            width: auto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
 
 
 
@@ -59,19 +42,20 @@
     </header>
 
     <div class="content">
-        <h2>
-            Contact
-        </h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name"><br>
-            <label for="email">Email:</label>
-            <input type="text" name="email" id=name><br>
-            <label for="Message">Story:</label><textarea id="story" name="story" rows="5"></textarea>
-            <input type="submit" value="Submit" />
-
-
-        </form>
+        <div id="pageinfo">
+            <h2>
+                Contact
+            </h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="Juan Castellanos">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id=name value="example@gmail.com">
+                <label for="Message">Story:</label><textarea id="story" name="story" rows="5"></textarea>
+                <input type="submit" value="Submit" />
+            </form>
+            <br>
+        </div>
     </div>
 
 
