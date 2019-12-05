@@ -8,70 +8,77 @@
     <title>
         Contact Me!
     </title>
-
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <style>
-            label,
-            input,
-            textarea {
-                display: block;
-                margin-bottom: 10px;
-                width: 600px;
-            }
-    
-            label {
-                font-weight: 700;
-                padding-top: 10px;
-            }
-    
-            input[type="submit"] {
-                width: auto;
-            }
-        </style>
-    
+        label,
+        input,
+        textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 600px;
+        }
+
+        label {
+            font-weight: 700;
+            padding-top: 10px;
+        }
+
+        input[type="submit"] {
+            width: auto;
+        }
+    </style>
+
 
 
 </head>
 
+
+
+
 <body>
 
-    <h1> 
-        Contact
-    </h1>
+    <header>
 
-    <header class="clearfix">
-            <ul>
-                <li id="mainname">
-                        Juan Carlos Castellanos Navarro
-                </li>
-                <li>
-                    <h3>
-                        <a href="index.html">About </a>
-                    </h3>
-                </li>
-                <li>   
-                    <h3>
-                        <a href="portfolio.html">Portfolio </a>
-                    </h3>
-                </li>
-                <li>
-                    <h3>
-                        <a href="contact.html">Contact </a>
-                    </h3>
-                </li>
-            </ul>
-        </header>
-    <form>
+
+        <div class="menu">
+            <div class="mainbutton">
+                Juan Carlos Castellanos Navarro
+            </div>
+            <div class="menuitem" id="contactbut">
+                <a href="contact.html"> Contact </a>
+            </div>
+            <div class="menuitem" id="portfoliobut">
+                <a href="portfolio.html"> Portfolio </a>
+            </div>
+            <div class="menuitem" id="aboutbut">
+                <a href="index.html"> About </a>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="content">
+        <h2>
+            Contact
+        </h2>
+        <form>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name"><br>
             <label for="email">Email:</label>
             <input type="text" name="email" id=name><br>
             <label for="Message">Story:</label><textarea id="story" name="story" rows="5"></textarea>
             <input type="submit" value="Submit" />
-    
 
-    </form> 
+
+        </form>
+    </div>
+
+
+    <footer>
+        Copyright ©
+
+    </footer>
 
 </body>
 
