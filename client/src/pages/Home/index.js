@@ -13,7 +13,7 @@ const Home = () => {
                 <img
                     src="assets/images/index.png"
                     id="mainpic"
-                    className="img-fluid max-width: 100% sm"
+                    className="img-thumbnail p-3 m-3 mh-50 h-33 img-fluid mt-0"
                 />
                 <p>
                     As somebody that moved in from down south, becoming part of a new
