@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LabeledProject from "./LabeledProject";
-
+import {Button,Modal} from 'react-bootstrap';
+import ProjectModal from "../../components/ProjectModal/"
 const Portfolio = () => {
 
     const [portfolioItems, setPortfolio] = useState([
@@ -11,6 +12,18 @@ const Portfolio = () => {
         { name: "Burger", image: "/assets/images/burger.png", deployedLink: "https://powerful-badlands-43542.herokuapp.com/", gitHubLink: "https://github.com/monguis/burger" },
         { name: "Note Taker (express.js)", image: "/assets/images/notetaker.png", deployedLink: "https://vast-sands-96309.herokuapp.com/", gitHubLink: "https://github.com/monguis/express" }
     ])
+
+
+    const [show, setShow] = useState({
+        show:false,
+        github:"",
+        title:"",
+        website:""
+    });
+
+    const handleClose = () => setShow({...show, show:false});
+    const handleShow = () => setShow({...show, show:true});
+
 
 
     // const handlePictureClick = (evt) => {
@@ -27,13 +40,14 @@ const Portfolio = () => {
     // const closeDiv = </div>;
 
     const handleImageClick = (e) => {
-        // e.preventDefault();
-        const index = e.target.parentElement.getAttribute("index");
-        const target = e.target.parentElement;
-        const project = portfolioItems[index];
-        document.getElementById("modalLink1").setAttribute("href", project.deployedLink);
-        document.getElementById("modalLink2").setAttribute("href", project.gitHubLink);
-        document.getElementById("exampleModalCenterTitle").textContent = project.name;
+      console.log (e.target.parentElement.getAttribute("index"));
+      const foundItem = e.target.parentElement.getAttribute("index");
+      setShow({
+        show:true,
+        github:portfolioItems[foundItem].gitHubLink,
+        title:portfolioItems[foundItem].name,
+        website:portfolioItems[foundItem].deployedLink
+    })
 
     };
 
@@ -54,150 +68,13 @@ const Portfolio = () => {
                     )
                 })}
             </div>
-        </div>
-        {/* <div className="row">
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://monguis.github.io/monguis.passwordgenerator.io/"
-                    >
-                        <img
-                            src="/assets/images/passwordgen.png"
-                            className="img-fluid"
-                            alt="..."
-                        />
-                        <div className="innerlabel">Password Generator</div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://monguis.github.io/weather-checker/"
-                    >
-                        <img
-                            src="/assets/images/weather.png"
-                            className="img-fluid"
-                            alt="..."
-                        />
-                        <div className="innerlabel">Weather Checker</div>
-                    </div>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://jeffordsm.github.io/Project1/"
-                    >
-                        <img
-                            src="/assets/images/project1.png"
-                            className="img-fluid"
-                            alt="..."
-                        />
-                        <div className="innerlabel">My First Project</div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://sheltered-falls-54052.herokuapp.com/"
-                    >
-                        <img
-                            src="/assets/images//project2.png"
-                            className="img-fluid"
-                            alt="..."
-                        />
-                        <div className="innerlabel">My Second Project</div>
-                    </div>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://powerful-badlands-43542.herokuapp.com/"
-                    >
-                        <img src="/assets/images/burger.png" className="img-fluid" alt="..." />
-                        <div className="innerlabel">Burger (MySQL manipulation)</div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div
-                        className="innerlabelpicture"
-                        data-toggle="modal"
-                        data-target="#exampleModalCenter"
-                        data-link="https://vast-sands-96309.herokuapp.com/"
-                    >
-                        <img
-                            src="/assets/images/notetaker.png"
-                            className="img-fluid"
-                            alt="..."
-                        />
-                        <div className="innerlabel">Note Taker (express.js)</div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
-        <div
-            className="modal fade"
-            id="exampleModalCenter"
-            tabIndex={-1}
-            role="dialog"
-            aria-labelledby="exampleModalCenterTitle"
-            aria-hidden="true"
-        >
-            <div className="modal-dialog modal-dialog-centered" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalCenterTitle">
-                            My first Project
-            </h5>
-                        <button
-                            type="button"
-                            className="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                        >
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <a
-                            id="modalLink1"
-                            href=""
-                            className="list-group-item list-group-item-action"
-                        >
-                            Link to Website
-            </a>
-                        <a
-                            id="modalLink2"
-                            href=""
-                            className="list-group-item list-group-item-action"
-                        >
-                            GitHub repository
-            </a>
-                    </div>
-                    <div className="modal-footer">
-                        <button
-                            type="button"
-                            className="btn btn-secondary"
-                            data-dismiss="modal"
-                        >
-                            Close
-            </button>
-                    </div>
-                </div>
-            </div>
+            <>
+      <Button variant="primary" onClick={handleImageClick}>
+        Launch demo modal
+      </Button>
+      <ProjectModal handleClose={handleClose} {...show}/>
+      
+    </>
         </div>
     </div>
 

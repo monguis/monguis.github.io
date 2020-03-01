@@ -38,7 +38,7 @@ const Home = () => {
                         LinkedIn Profile
           </a>
                     <a
-                        href="https://monguis.github.io/client/public/assets/Juan%20Carlos%20Castellanos%20Navarro%20resume.pdf"
+                        href="https://github.com/monguis/monguis.github.io/raw/master/client/public/assets/Juan%20Carlos%20Castellanos%20Navarro%20resume.pdf"
                         className="list-group-item list-group-item-action"
                     >
                         Resume
