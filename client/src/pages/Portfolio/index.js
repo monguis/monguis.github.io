@@ -4,12 +4,12 @@ import LabeledProject from "./LabeledProject";
 const Portfolio = () => {
 
     const [portfolioItems, setPortfolio] = useState([
-        { name: "Weather Dashboard", deployedLink: "https://monguis.github.io/weather-checker/", image: "assets/images/weather.png", gitHubLink: "https://github.com/monguis/weather-checker" },
-        { name: "Password Generator", image: "assets/images/passwordgen.png", deployedLink: "https://monguis.github.io/monguis.passwordgenerator.io/", gitHubLink: "https://github.com/monguis/monguis.passwordgenerator.io" },
-        { name: "My First Project", image: "assets/images/project1.png", deployedLink: "https://jeffordsm.github.io/Project1/", gitHubLink: "https://github.com/JeffordsM/Project1" },
-        { name: "My Second Project", image: "assets/images//project2.png", deployedLink: "https://sheltered-falls-54052.herokuapp.com/", gitHubLink: "https://github.com/BestBroBradley/project-two" },
-        { name: "Burger", image: "assets/images/burger.png", deployedLink: "https://powerful-badlands-43542.herokuapp.com/", gitHubLink: "https://github.com/monguis/burger" },
-        { name: "Note Taker (express.js)", image: "assets/images/notetaker.png", deployedLink: "https://vast-sands-96309.herokuapp.com/", gitHubLink: "https://github.com/monguis/express" }
+        { name: "Weather Dashboard", deployedLink: "https://monguis.github.io/weather-checker/", image: "/assets/images/weather.png", gitHubLink: "https://github.com/monguis/weather-checker" },
+        { name: "Password Generator", image: "/assets/images/passwordgen.png", deployedLink: "https://monguis.github.io/monguis.passwordgenerator.io/", gitHubLink: "https://github.com/monguis/monguis.passwordgenerator.io" },
+        { name: "My First Project", image: "/assets/images/project1.png", deployedLink: "https://jeffordsm.github.io/Project1/", gitHubLink: "https://github.com/JeffordsM/Project1" },
+        { name: "My Second Project", image: "/assets/images//project2.png", deployedLink: "https://sheltered-falls-54052.herokuapp.com/", gitHubLink: "https://github.com/BestBroBradley/project-two" },
+        { name: "Burger", image: "/assets/images/burger.png", deployedLink: "https://powerful-badlands-43542.herokuapp.com/", gitHubLink: "https://github.com/monguis/burger" },
+        { name: "Note Taker (express.js)", image: "/assets/images/notetaker.png", deployedLink: "https://vast-sands-96309.herokuapp.com/", gitHubLink: "https://github.com/monguis/express" }
     ])
 
 
@@ -29,8 +29,8 @@ const Portfolio = () => {
     const handleImageClick = (e) => {
         // e.preventDefault();
         const index = e.target.parentElement.getAttribute("index");
+        const target = e.target.parentElement;
         const project = portfolioItems[index];
-        console.log(index);
         document.getElementById("modalLink1").setAttribute("href", project.deployedLink);
         document.getElementById("modalLink2").setAttribute("href", project.gitHubLink);
         document.getElementById("exampleModalCenterTitle").textContent = project.name;
@@ -64,7 +64,7 @@ const Portfolio = () => {
                         data-link="https://monguis.github.io/monguis.passwordgenerator.io/"
                     >
                         <img
-                            src="assets/images/passwordgen.png"
+                            src="/assets/images/passwordgen.png"
                             className="img-fluid"
                             alt="..."
                         />
@@ -79,7 +79,7 @@ const Portfolio = () => {
                         data-link="https://monguis.github.io/weather-checker/"
                     >
                         <img
-                            src="assets/images/weather.png"
+                            src="/assets/images/weather.png"
                             className="img-fluid"
                             alt="..."
                         />
@@ -96,7 +96,7 @@ const Portfolio = () => {
                         data-link="https://jeffordsm.github.io/Project1/"
                     >
                         <img
-                            src="assets/images/project1.png"
+                            src="/assets/images/project1.png"
                             className="img-fluid"
                             alt="..."
                         />
@@ -111,7 +111,7 @@ const Portfolio = () => {
                         data-link="https://sheltered-falls-54052.herokuapp.com/"
                     >
                         <img
-                            src="assets/images//project2.png"
+                            src="/assets/images//project2.png"
                             className="img-fluid"
                             alt="..."
                         />
@@ -127,7 +127,7 @@ const Portfolio = () => {
                         data-target="#exampleModalCenter"
                         data-link="https://powerful-badlands-43542.herokuapp.com/"
                     >
-                        <img src="assets/images/burger.png" className="img-fluid" alt="..." />
+                        <img src="/assets/images/burger.png" className="img-fluid" alt="..." />
                         <div className="innerlabel">Burger (MySQL manipulation)</div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@ const Portfolio = () => {
                         data-link="https://vast-sands-96309.herokuapp.com/"
                     >
                         <img
-                            src="assets/images/notetaker.png"
+                            src="/assets/images/notetaker.png"
                             className="img-fluid"
                             alt="..."
                         />

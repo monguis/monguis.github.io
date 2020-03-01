@@ -11,7 +11,7 @@ const Home = () => {
         <div className="row">
             <div className="col-md">
                 <img
-                    src="assets/images/index.png"
+                    src="/assets/images/index.png"
                     id="mainpic"
                     className="img-thumbnail p-3 m-3 mh-50 h-33 img-fluid mt-0"
                 />
@@ -38,7 +38,7 @@ const Home = () => {
                         LinkedIn Profile
           </a>
                     <a
-                        href="https://monguis.github.io/monguis.bootstrap.portfolio.github.com/assets/Juan%20Carlos%20Castellanos%20Navarro%20resume.docx"
+                        href="https://monguis.github.io/client/public/assets/Juan%20Carlos%20Castellanos%20Navarro%20resume.pdf"
                         className="list-group-item list-group-item-action"
                     >
                         Resume
