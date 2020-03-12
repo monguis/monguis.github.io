@@ -40,6 +40,9 @@
 .navbar {
     border-bottom:solid 1px #11ffea;
 }
+
+
+
 @media screen and (max-width: 768px) {
     /* The body's bg color will be #333 */
     /* The wrapper's width will be 600px */

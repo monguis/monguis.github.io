@@ -6,12 +6,16 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Footer from "./components/Footer";
+
+
 
 // The app will not render correctly until you setup a Route component.
 // Refer to the Basic Example documentation if you need to.
 // (https://reacttraining.com/react-router/web/example/basic)
 function App() {
   return (
+    <>
     <BrowserRouter>
         <Nav />
         <Switch>
@@ -29,6 +33,8 @@ function App() {
           </Route>
         </Switch>
     </BrowserRouter>
+        <Footer/>
+ </>
   );
 }
 
