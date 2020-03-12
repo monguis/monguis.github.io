@@ -31,6 +31,7 @@ const Home = () => {
         <div className="row ">
             <div className="col-md bg-dark">
                 <div className="list-group pt-3">
+                    
                     <a
                         href="https://www.linkedin.com/in/juan-carlos-castellanos-navarro-568433116/"
                         className="list-group-item list-group-item-action"

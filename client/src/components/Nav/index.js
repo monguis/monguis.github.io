@@ -1,32 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <div className="col-lg-3 col-md-6 h1div">
-          <h1 className="text-light">Juan Carlos</h1>
-        </div>
-        <div className="col-lg-4 offset-lg-5 col-md-6">
-          <div className="row d-flex justify-content-center">
-            {/* <div class="col-md-4"> */}
-            <a className="nav-link" href="/contact/">
+    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+      <div className="col-lg-3 col-md-6 h1div">
+        <h1 className="text-light">Juan Carlos</h1>
+      </div>
+      <div className="col-lg-4 offset-lg-5 col-md-6">
+        <div className="row d-flex justify-content-center">
+          <Link className="nav-link" to="/contact/">
+
               Contact
-        </a>
-            {/* </div> */}
-            {/* <div class="col-md-4"> */}
-            <a className="nav-link" href="/portfolio/">
+    
+          </Link>
+          <Link className="nav-link" to="/portfolio/">
               Portfolio
-        </a>
-            {/* </div> */}
-            {/* <div class="col-md-4"> */}
-            <a className="nav-link" href="/home/">
+          </Link >
+          <Link className="nav-link" to="/home/">
+
               About
-        </a>
-            {/* </div> */}
-          </div>
+
+          </Link >
         </div>
       </div>
+
     </nav>
   );
 }

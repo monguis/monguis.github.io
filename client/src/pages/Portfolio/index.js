@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LabeledProject from "./LabeledProject";
-import {Button,Modal} from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import ProjectModal from "../../components/ProjectModal/"
 const Portfolio = () => {
 
@@ -15,14 +15,14 @@ const Portfolio = () => {
 
 
     const [show, setShow] = useState({
-        show:false,
-        github:"",
-        title:"",
-        website:""
+        show: false,
+        github: "",
+        title: "",
+        website: ""
     });
 
-    const handleClose = () => setShow({...show, show:false});
-    const handleShow = () => setShow({...show, show:true});
+    const handleClose = () => setShow({ ...show, show: false });
+    const handleShow = () => setShow({ ...show, show: true });
 
 
 
@@ -40,14 +40,14 @@ const Portfolio = () => {
     // const closeDiv = </div>;
 
     const handleImageClick = (e) => {
-      console.log (e.target.parentElement.getAttribute("index"));
-      const foundItem = e.target.parentElement.getAttribute("index");
-      setShow({
-        show:true,
-        github:portfolioItems[foundItem].gitHubLink,
-        title:portfolioItems[foundItem].name,
-        website:portfolioItems[foundItem].deployedLink
-    })
+        console.log(e.target.parentElement.getAttribute("index"));
+        const foundItem = e.target.parentElement.getAttribute("index");
+        setShow({
+            show: true,
+            github: portfolioItems[foundItem].gitHubLink,
+            title: portfolioItems[foundItem].name,
+            website: portfolioItems[foundItem].deployedLink
+        })
 
     };
 
@@ -69,12 +69,12 @@ const Portfolio = () => {
                 })}
             </div>
             <>
-      <Button variant="primary" onClick={handleImageClick}>
-        Launch demo modal
+                <Button variant="primary" onClick={handleImageClick}>
+                    Launch demo modal
       </Button>
-      <ProjectModal handleClose={handleClose} {...show}/>
-      
-    </>
+                <ProjectModal handleClose={handleClose} {...show} />
+
+            </>
         </div>
     </div>
 
