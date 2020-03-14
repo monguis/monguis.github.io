@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div className="nav-wrapper" style={{height:"20%"}}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="col-lg-3 col-md-6 h1div">
         <h1 className="text-light">Juan Carlos</h1>
       </div>
@@ -27,6 +28,7 @@ function Nav() {
       </div>
 
     </nav>
+    </div>
   );
 }
 
