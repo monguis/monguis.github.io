@@ -100,3 +100,22 @@
     transform-origin: bottom left;
     background-color: #9dfafe;
 }
+
+.footerIcon {
+    color:#11ffea;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.footerIcon:hover {
+    content: "";
+    color: white;
+    text-shadow: 0 0 5px #9dfafe;
+   
+}
+
+footer {
+    margin: 0;
+}
