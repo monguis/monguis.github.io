@@ -1,17 +1,12 @@
-#root {
+html , #root {
     background-color: black;
     color:white;
-    height: 100vh;
 
     /* font-family: 'Open Sans', sans-serif; */
 
     font-family: 'Montserrat', sans-serif;
 
 
-}
-
-body {
-    background-color: black;
 }
 
 #mainpic {

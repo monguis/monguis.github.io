@@ -1,9 +1,9 @@
 import React from "react";
-import { Button, Modal,ListGroup } from 'react-bootstrap';
+import { Button, Modal, ListGroup } from 'react-bootstrap';
 
 const ProjectModal = (props) => {
 
-    const { handleClose, show, github,title,website} = props;
+    const { handleClose, show, github, title, website } = props;
 
     return (
         <Modal show={show} onHide={handleClose} animation={true}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import Home from "./pages/Home/";
 import Portfolio from "./pages/Portfolio/"
 import Contact from "./pages/Contact/"
@@ -13,10 +13,23 @@ import Footer from "./components/Footer";
 // Refer to the Basic Example documentation if you need to.
 // (https://reacttraining.com/react-router/web/example/basic)
 function App() {
+
+  const [height,setHeight] = useState(Math.ceil(window.innerHeight/1.7));
+  // useEffect(()=>{
+  //   console.log(window.innerHeight)
+  //   setHeight(100)
+
+  
+  // },[]);
+  const handleHeight = (heightValue) =>{
+    console.log("algo")
+    setHeight(heightValue);
+  }
+
   return (
     <>
     <BrowserRouter>
-        <Nav />
+        <Nav height={height}/>
         <Switch>
           <Route exact path={["/","/home"]}>
             <Home />
@@ -32,7 +45,7 @@ function App() {
           </Route>
         </Switch>
     </BrowserRouter>
-        <Footer/>
+        <Footer handleHeight={handleHeight} height={height}/>
  </>
   );
 }
