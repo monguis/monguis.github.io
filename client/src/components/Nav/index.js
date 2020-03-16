@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 
 
 function Nav() {
-  return (
-    <div className="nav-wrapper" style={{height:"20%"}}>
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+
+  const [height,setHeight] = useState(500)
+// useEffect(()=>{
+//   setHeight(100)
+
+// },[]);
+
+  return (<>
+    <div className="nav-wrapper fixed-top " style={{height:"20%"}}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{height: height+"px"}}>
       <div className="col-lg-3 col-md-6 h1div">
         <h1 className="text-light">Juan Carlos</h1>
       </div>
@@ -29,6 +36,7 @@ function Nav() {
 
     </nav>
     </div>
+    <div className="navHolder" style={{height:120}}></div></>
   );
 }
 

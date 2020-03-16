@@ -9,7 +9,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from "./components/Footer";
 
 
-
 // The app will not render correctly until you setup a Route component.
 // Refer to the Basic Example documentation if you need to.
 // (https://reacttraining.com/react-router/web/example/basic)
