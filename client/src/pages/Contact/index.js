@@ -1,31 +1,10 @@
 import React from "react";
-// const CSSTransitionGroup = React.addons.CSSTransitionGroup;
+import PDF from "../../components/PDF";
 
-// class Contact extends React.Component{
-//     constructor(props) {
-//         super(props);
-//         this.state = { visible: false };
-//         this.handleClick = this.handleClick.bind(this)
-//     }
-
-//     handleClick() {
-//     	this.setState({ visible: ! this.state.visible });
-//     }
-
-//     render() {
-//         return <div>
-//             <button onClick={this.handleClick}>{this.state.visible ? 'Slide up' : 'Slide down'}</button>
-//             <CSSTransitionGroup transitionName="example">
-//             	{ this.state.visible ? <div className='panel' /> : null }
-//             </CSSTransitionGroup>
-//         </div>
-//     }
-// }
 
 
 const Contact = () => {
 
-    
     return (<div className="container">
         <div className="row">
             <div className="col-md col-lg-8 col-sm">

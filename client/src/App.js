@@ -7,6 +7,9 @@ import Nav from "./components/Nav";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from "./components/Footer";
+import { pdfjs } from 'react-pdf';
+import Resume from "./pages/Resume";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
 // The app will not render correctly until you setup a Route component.
@@ -15,21 +18,24 @@ import Footer from "./components/Footer";
 function App() {
 
   const [height,setHeight] = useState(Math.ceil(window.innerHeight/1.7));
-  // useEffect(()=>{
-  //   console.log(window.innerHeight)
-  //   setHeight(100)
+  const [accessed,setAccessed] = useState(false)
 
-  
-  // },[]);
   const handleHeight = (heightValue) =>{
-    console.log("algo")
     setHeight(heightValue);
+  }
+
+  const handleAccess = ()=>{
+    setTimeout(function () {
+      console.log("si espero")
+    setAccessed(true);
+  }, 1500);
+  
   }
 
   return (
     <>
     <BrowserRouter>
-        <Nav height={height}/>
+        <Nav height={height} accessed={accessed} handleAccess={handleAccess}/>
         <Switch>
           <Route exact path={["/","/home"]}>
             <Home />
@@ -40,14 +46,16 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
+          <Route exact path="/resume">
+            <Resume />
+          </Route>
          <Route path="*">
             <NoMatch />
           </Route>
         </Switch>
     </BrowserRouter>
-        <Footer handleHeight={handleHeight} height={height}/>
+        <Footer handleHeight={handleHeight} accessed={accessed} handleAccess={handleAccess} height={height}/>
  </>
   );
 }
-
 export default App;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import LabeledProject from "./LabeledProject";
-import { Button, Modal } from 'react-bootstrap';
 import ProjectModal from "../../components/ProjectModal/"
 const Portfolio = () => {
 
@@ -13,7 +12,6 @@ const Portfolio = () => {
         { name: "Note Taker (express.js)", image: "/assets/images/notetaker.png", deployedLink: "https://vast-sands-96309.herokuapp.com/", gitHubLink: "https://github.com/monguis/express" }
     ])
 
-
     const [show, setShow] = useState({
         show: false,
         github: "",
@@ -22,22 +20,6 @@ const Portfolio = () => {
     });
 
     const handleClose = () => setShow({ ...show, show: false });
-    const handleShow = () => setShow({ ...show, show: true });
-
-
-
-    // const handlePictureClick = (evt) => {
-    //     evt.preventDefault();
-    //     portfolioItems.forEach(function (project) {
-    //         if (project.deployedLink === evt.target.parentElement.getAttribute("data-link")) {
-    //             $("#modalLink1").attr("href", project.deployedLink);
-    //             $("#modalLink2").attr("href", project.gitHubLink);
-    //             $("#exampleModalCenterTitle").text(project.name);
-    //         }
-    //     });
-    // };
-    // const AuxDiv = <div className="col-md-6">;
-    // const closeDiv = </div>;
 
     const handleImageClick = (e) => {
         console.log(e.target.parentElement.getAttribute("index"));
@@ -69,9 +51,6 @@ const Portfolio = () => {
                 })}
             </div>
             <>
-                <Button variant="primary" onClick={handleImageClick}>
-                    Launch demo modal
-      </Button>
                 <ProjectModal handleClose={handleClose} {...show} />
 
             </>
