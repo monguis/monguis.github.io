@@ -26,7 +26,6 @@ function App() {
 
   const handleAccess = ()=>{
     setTimeout(function () {
-      console.log("si espero")
     setAccessed(true);
   }, 1500);
   

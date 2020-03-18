@@ -13,9 +13,9 @@ const Footer = (props) => {
           zIndex: 1010,
           height: height + "px"
         }}>
-          <div className="d-flex flex-row-reverse bd-highlight " style={{ opacity: accessed ? 1 : 0 ,transition: "all 0.7s"}}>
-            <a href="https://github.com/monguis"><i className="fab footerIcon fa-github px-2"></i></a>
-            <a href="https://www.linkedin.com/in/juan-carlos-castellanos-navarro-568433116/ "><i className="px-2 fab footerIcon fa-linkedin-in"></i></a>
+          <div className="d-flex flex-row-reverse bd-highlight " style={{ opacity: accessed ? 1 : 0, transition: "all 0.7s" }}>
+            <a target="_blank" href="https://github.com/monguis"><i className="fab footerIcon fa-github px-2"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/juan-carlos-castellanos-navarro-568433116/ "><i className="px-2 fab footerIcon fa-linkedin-in"></i></a>
             Links:
           </div>
           <br></br><br></br><br></br><br></br>
@@ -23,9 +23,14 @@ const Footer = (props) => {
             <q>It is not knowledge, but the act of learning, not possession but the act of getting there, which grants the greatest enjoyment.</q>
             <p>Carl Friedrich Gauss</p>
           </div>
-          <button onClick={() => { handleHeight(100); handleAccess() }}>
-            sdaf
-</button>
+          <div className="d-flex justify-content-center" >
+          <button id="welcomeBtn" onClick={() => {
+            document.getElementById("welcomeBtn" ).style.opacity=0;
+            handleHeight(100);
+             handleAccess() }}>
+          <span>Welcome to my Portfolio </span> 
+          </button>
+          </div>
         </footer>
       </div>
     </>

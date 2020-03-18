@@ -7,7 +7,7 @@ const Nav = (props) => {
   return (<>
     <div className="nav-wrapper fixed-top ">
       <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{ height: height + "px" }}>
-        <div style={{ transition: "all 0.7s",fontSize:" 2rem" }} className={` 	col-xl-${accessed ? "3" : "6"} col-lg-6 h1div col-sm-12`}>
+        <div style={{ transition: "all 0.7s", fontSize:" 2rem" }} className={` 	col-xl-${accessed ? "3" : "6"} col-lg-6 h1div col-sm-12`}>
           <Link to="/home/">
             <h1 id="mainLink">{accessed ? "Juan Carlos" : "Juan Carlos Castellanos Navarro "}</h1>
           </Link >

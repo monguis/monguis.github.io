@@ -203,6 +203,48 @@ h2{
     text-shadow: 0 0 15px #9dfafe;
 }
 
-p{
-
+#welcomeBtn{
+    position: absolute;
+    bottom:40px;
+    margin: auto;
+    border-radius: 30px;
+    padding:20px;
+    background-color: black;
+    color:white;
+    border:solid 3px #11ffea;
+    text-align: center;
+    transition: all 0.5s;
 }
+
+
+#welcomeBtn:hover {filter: drop-shadow( 0 -5px 10px #11ffea);}
+
+#welcomeBtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #welcomeBtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  #welcomeBtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  #welcomeBtn:hover span {
+    padding-right: 25px;
+  }
+  
+  #welcomeBtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
