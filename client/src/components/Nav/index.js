@@ -6,14 +6,14 @@ const Nav = (props) => {
   let { height, accessed } = props;
   return (<>
     <div className="nav-wrapper fixed-top ">
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{ height: height + "px" }}>
-        <div style={{ transition: "all 0.7s", fontSize:" 2rem" }} className={` 	col-xl-${accessed ? "3" : "6"} col-lg-6 h1div col-sm-12`}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{ height: (height + (accessed ? window.innerWidth <= 992 ? 200 : 0 : 0)) + "px" }}>
+        <div style={{ transition: "all 0.7s", fontSize: " 2rem" }} className={` 	col-xl-${accessed ? "3" : "6"} col-lg-6 h1div col-sm-12`}>
           <Link to="/home/">
             <h1 id="mainLink">{accessed ? "Juan Carlos" : "Juan Carlos Castellanos Navarro "}</h1>
           </Link >
         </div>
-        <div className="col-xl-4 offset-xl-5 col-lg-6 col-sm-12" style={{ opacity: accessed ? 1 : 0 }}>
-          <div className="row d-flex justify-content-center">
+        <div className="col-xl-4 offset-xl-5 col-lg-6 col-sm-12 d-flex justify-content-center align-items-start" style={{ opacity: accessed ? 1 : 0 }}>
+          <div className="row">
 
             <Link className="nav-link" to="/home/">
               About
