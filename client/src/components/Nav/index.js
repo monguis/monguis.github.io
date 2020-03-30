@@ -3,10 +3,28 @@ import { Link } from "react-router-dom";
 
 
 const Nav = (props) => {
-  let { height, accessed } = props;
+  let lastScrollY = 0;
+  const { height, accessed } = props;
+
+ useEffect(()=>{
+  window.addEventListener('scroll', handleScroll);
+ },[])
+
+ const handleScroll = () => {
+  const currentScrollY = window.scrollY;
+
+
+  if (currentScrollY > lastScrollY) {
+    console.log("down")
+  } else {
+    console.log("up")
+  }
+  lastScrollY = currentScrollY 
+};
+
   return (<>
     <div className="nav-wrapper fixed-top ">
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{ height: (height + (accessed ? window.innerWidth <= 992 ? 200 : 0 : 0)) + "px" }}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark" style={{ height: (height + (accessed ? window.innerWidth <= 992 ? 100 : 0 : 0)) + "px" }}>
         <div style={{ transition: "all 0.7s", fontSize: " 2rem" }} className={` 	col-xl-${accessed ? "3" : "6"} col-lg-6 h1div col-sm-12`}>
           <Link to="/home/">
             <h1 id="mainLink">{accessed ? "Juan Carlos" : "Juan Carlos Castellanos Navarro "}</h1>

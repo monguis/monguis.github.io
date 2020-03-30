@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter  >
         <Nav height={height} accessed={accessed} handleAccess={handleAccess}/>
         <Switch>
           <Route exact path={["/","/home"]}>
