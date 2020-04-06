@@ -59,20 +59,26 @@ html , #root {
 .navbar {
     clip-path:polygon(0 0, 100% 0, 100% 70%, 0 100%);
     margin: 0;
-    
+    transition: all 1.5s;
+}
+
+.hiddenMenuWrapper {
+    filter: drop-shadow( 0px 5px 10px #11ffea);
+}
+
+.hiddenMenu{
+    background-color: white;
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    margin: 0;
     transition: all 1.5s;
 }
 
 .nav-wrapper {
-/* border-bottom: solid 1px #11ffea; */
-
 filter: drop-shadow( 0px 5px 10px #11ffea);
 }
 
 
 @media screen and (max-width: 768px) {
-    /* The body's bg color will be #333 */
-    /* The wrapper's width will be 600px */
     .wrapper {
         width: 600px;
     }
