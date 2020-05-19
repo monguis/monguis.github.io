@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
     return (
-        <div className="container d-flex align-items-center" >
+        <div className="container d-flex align-items-center">
 
             <div className="row d-flex ">
                 <div className="col-md ">
